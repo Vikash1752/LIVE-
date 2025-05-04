@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LIVE STREAMING</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('Bagraund.jpg') no-repeat center center fixed; /* Local Image */
+      background-size: cover; /* Ensures the image covers the full screen */
+      color: #FFD700; /* Golden text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+
+    /* Blinking dot animation */
+    @keyframes blink-dot {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .live-text {
+      font-size: 3em;
+      color: #FFD700;
+      font-weight: bold;
+      margin-top: 100px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    }
+
+    .live-text span {
+      color: #ff0000; /* Red color for the "LIVE" text */
+      animation: blink-dot 1s step-start infinite; /* Blink effect */
+    }
+
+    iframe {
+      width: 80%;
+      max-width: 900px;
+      height: 500px;
+      border: 5px solid #FFD700; /* Golden border */
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+
+    /* Venue Information Section */
+    .venue {
+      position: absolute;
+      bottom: 20px; /* Position at the bottom */
+      width: 100%;
+      font-size: 1.1em; /* Small font size */
+      color: #FFD700; /* Golden text */
+      background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+      padding: 8px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Main Content Section -->
+  <div class="live-text">
+    <span>🔴</span> LIVE STREAMING
+  </div>
+
+  <!-- YouTube Live Video Embed -->
+  <iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen>
+  </iframe>
+
+  <!-- Venue Information Section -->
+  <div class="venue">
+    <p><strong>Venue:</strong> Brilliant Convention Centre Indore M.P | <strong>Date:</strong> 5th May 2025 | <strong>Time:</strong> 8:00 PM</p>
+  </div>
+
+</body>
+</html>
